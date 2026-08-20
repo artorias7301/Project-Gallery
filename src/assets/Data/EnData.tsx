@@ -1,8 +1,11 @@
+import testImage from "../images/testImage.jpg"
+import testImage2 from "../images/testImage2.jpg"
+
 export const projects = [
   {
     id: "76586a44-4380-49a1-b84c-8834e5f87211",
     title: "testing...",
-    image: "/images/testImage.jpg",
+    image: testImage,
     description: "firs testing project in the gallery",
     usedTechs: [
       "React",
@@ -19,7 +22,7 @@ export const projects = [
   },{
     id: "9424c1ac-7509-45be-a5bf-38cda4308a42",
     title: "secound test",
-    image: "/images/testImage2.jpg",
+    image: testImage2,
     description: "secound testing project in the gallery",
     usedTechs: [
       "React",

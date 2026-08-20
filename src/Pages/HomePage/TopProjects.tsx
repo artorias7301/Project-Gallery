@@ -1,4 +1,4 @@
-import { projects } from "../../../public/Data/EnData";
+import { projects } from "../../assets/Data/EnData";
 import styles from "./TopProjects.module.scss"
 
 export function TopProjects() {
