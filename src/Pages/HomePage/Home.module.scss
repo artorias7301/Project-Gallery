@@ -1,0 +1,29 @@
+// $primary: #000;
+
+// .title {
+//     background: $primary;
+// }
+
+// @mixin center {
+//     color: #000;
+// }
+
+// .cs {
+//     @include center()
+// }
+
+.tech {
+    color: aqua;
+    display: inline;
+    margin: 0.25rem;
+    border: 1px solid #00ff00;
+}
+
+.projectsBox {
+    background-color: rgb(4, 0, 255);
+}
+
+.project {
+    margin-top: 1rem;
+    background-color: #ff6a00;
+}
