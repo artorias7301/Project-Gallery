@@ -1,4 +1,5 @@
 import { projects } from "../../assets/Data/EnData";
+import { ArrowRight } from "lucide-react";
 import styles from "./TopProjects.module.scss"
 
 export function TopProjects() {
@@ -9,7 +10,7 @@ export function TopProjects() {
           <div key={project.id} className={styles.project}>
             <div className={styles.projectInfo}>
               <h1 className={styles.ProjectTitle}>{project.title}</h1>
-              <p>{project.description}</p>
+              <p className={styles.description}>{project.description}</p>
               <div className={styles.stack}>
                 {project.usedTechs.map((tech) => {
                   return (
@@ -17,7 +18,7 @@ export function TopProjects() {
                   );
                 })}
               </div>
-              <button className={styles.seeMore}>View Project</button>
+              <button className={styles.seeMore}>View Project <ArrowRight /></button>
             </div>
             <div className={styles.projectImage}>
               <img src={project.image} />

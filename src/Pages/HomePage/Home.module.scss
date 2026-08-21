@@ -1,6 +1,3 @@
-
-
-
 // $primary: #000;
 
 // .title {
@@ -15,22 +12,119 @@
 //     @include center()
 // }
 
-.tech {
-    color: aqua;
-    display: inline;
-    margin: 0.25rem;
-    border: 1px solid #00ff00;
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.projectsBox {
-    background-color: rgb(4, 0, 255);
+.section{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    margin: 3rem 0 3rem 0;
 }
 
-.project {
+.hero {}
+
+.state {
+    display: flex;
+    gap: 0.25rem;
+    color: #39ff14;
+    align-items: center;
+    & span {
+        display: block;
+        background-color: #39ff14;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+    }
+}
+
+.title {
+    position: relative;
+    display: flex;
+    color: #fff;
+    max-width: 300px;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 3rem;
+    margin: 1rem 0 1rem 0;
+    & span {
+        position: absolute;
+        bottom: 0;
+        right: -0.5rem;
+        color: #39ff14;
+    }
+}
+
+.about {
+    color: #444;
+    max-width: 300px;
+}
+
+.CTA {
+    display: flex;
+    gap: 0.5rem;
     margin-top: 1rem;
-    background-color: #ff6a00;
 }
 
-img {
-    scale: 0.1;
+.projectsBtn {
+    background: #39ff14;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+.contactBtn {
+    color: #fff;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+.heroImage {
+    box-shadow: 0 0 10px #39ff14;
+}
+
+.projectSection {
+    padding: 2rem;
+}
+
+.top {
+    color: #39ff14;
+}
+
+.projetsPreview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & h1 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 2rem;
+        margin: 0;
+    } & p {
+        color: #444;
+        margin: 0;
+    }
+}
+
+.projectsBox{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+
+.SeeMore {
+    display: flex;
+    background-color: #39ff14;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    color: #000;
+    font-weight: bold;
 }

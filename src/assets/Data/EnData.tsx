@@ -6,12 +6,17 @@ export const projects = [
     id: "76586a44-4380-49a1-b84c-8834e5f87211",
     title: "testing...",
     image: testImage,
-    description: "firs testing project in the gallery",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, impedit vitae dolor nemo eius explicabo omnis quasi officiis voluptates exercitationem atque ut praesentium possimus! Quod doloremque incidunt voluptas cum libero.",
     usedTechs: [
       "React",
       "HTML",
       "SASS",
-      "TypeScript"
+      "TypeScript",
+      "CSS",
+      "Python",
+      "Nothing",
+      "Nothing",
+      "Nothing"
     ],
     tags: [
       "test",
@@ -23,7 +28,7 @@ export const projects = [
     id: "9424c1ac-7509-45be-a5bf-38cda4308a42",
     title: "secound test",
     image: testImage2,
-    description: "secound testing project in the gallery",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, impedit vitae dolor nemo eius explicabo omnis quasi officiis voluptates exercitationem atque ut praesentium possimus! Quod doloremque incidunt voluptas cum libero.",
     usedTechs: [
       "React",
       "HTML",

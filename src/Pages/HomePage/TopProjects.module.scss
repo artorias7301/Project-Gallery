@@ -1,0 +1,70 @@
+* {margin: 0;}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  background: #22222289;
+  height: 20rem;
+  border: 1px solid #111;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ProjectTitle {
+  color: #fff;
+}
+
+.description {
+  color: #444;
+  overflow-wrap: anywhere;
+}
+
+.stack{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech {
+  padding: 0.5rem;
+  background: #222;
+  border-radius: 0.5rem;
+  color: #39ff14;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.seeMore {
+  border: none;
+  background-color: transparent;
+  color: #39ff14;
+  font-weight: bold;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.projectImage {
+  height: 20rem;
+  display: block;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  & img {
+    width: 480px;
+    height: 320px;
+    object-fit: cover;
+  }
+}
