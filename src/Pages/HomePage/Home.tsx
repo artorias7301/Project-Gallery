@@ -10,7 +10,7 @@ export function HomePage() {
       <Header />
       <div className={styles.section}>
         <div className={styles.hero}>
-          <p className={styles.state}>Avaiable<span>.</span></p>
+          <p className={styles.state}><span>.</span>AVAILABLE FOR HIRE</p>
           <h1 className={styles.title}>Building Apps People actually Use.<span>|</span></h1>
           <p className={styles.about}>
             Full-Stack developer in React, Python, TypeScript.
@@ -23,7 +23,7 @@ export function HomePage() {
           <div></div>
         </div>
         <div className={styles.heroImage}>
-          <img src="../../../public/images/testImage.jpg"/>
+          <img src="../../../public/images/testImage.jpg" />
         </div>
       </div>
 
@@ -32,12 +32,12 @@ export function HomePage() {
         <h1>Projects:</h1>
         <p>Latest update: 2026/06/13</p>
       </div>
-      
+
 
       {/* move to its own component */}
       <div className={styles.projectsBox}>
-        <TopProjects/>
-        <button className={styles.SeeMore}>See More<ArrowUpRight/></button>
+        <TopProjects />
+        <button className={styles.SeeMore}>See More<ArrowUpRight /></button>
       </div>
     </>
   );
