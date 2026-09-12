@@ -1,4 +1,5 @@
 import { Header } from "../../Components/Header/Header";
+import { Footer } from "../../Components/Footer/Footer";
 import { TopProjects } from "./TopProjects";
 import { ArrowUpRight } from "lucide-react";
 import styles from "./Home.module.scss"
@@ -23,7 +24,7 @@ export function HomePage() {
           <div></div>
         </div>
         <div className={styles.heroImage}>
-          {/* <img src="../../../public/images/testImage.jpg" /> */}
+          <img src='../../assets/images/Hero.jpeg' />
         </div>
       </div>
 
@@ -41,6 +42,8 @@ export function HomePage() {
           <button className={styles.SeeMore}>See More<ArrowUpRight /></button>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };

@@ -1,22 +1,20 @@
-import testImage from "../images/testImage.jpg"
-import testImage2 from "../images/testImage2.jpg"
+import projectGallery from '../images/project-Gallery.jpeg'
+import Nexo from '../images/Nexo-Infinite.jpeg'
 
 export const projects = [
   {
     id: "76586a44-4380-49a1-b84c-8834e5f87211",
-    title: "testing...",
-    image: testImage,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, impedit vitae dolor nemo eius explicabo omnis quasi officiis voluptates exercitationem atque ut praesentium possimus! Quod doloremque incidunt voluptas cum libero.",
+    title: "Project Gallery",
+    image: projectGallery,
+    description: "A modern portfolio gallery desiged to showcase my project and frontend development skills. Built with React and TypeScript, with a clean, resposive, and user-friendly inteface.",
     usedTechs: [
-      "React",
       "HTML",
+      "CSS",
       "SASS",
       "TypeScript",
-      "CSS",
-      "Python",
-      "Nothing",
-      "Nothing",
-      "Nothing"
+      "JavaScript",
+      "React",
+      "Redux"
     ],
     tags: [
       "test",
@@ -26,14 +24,18 @@ export const projects = [
     featured: true
   },{
     id: "9424c1ac-7509-45be-a5bf-38cda4308a42",
-    title: "secound test",
-    image: testImage2,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, impedit vitae dolor nemo eius explicabo omnis quasi officiis voluptates exercitationem atque ut praesentium possimus! Quod doloremque incidunt voluptas cum libero.",
+    title: "NEXO Infinite",
+    image: Nexo,
+    description: "An Android messaging application built with React Native, featuring a clean and responsive interface for real-time communication. The project focuses on smooth experience with modern UI ad intuitive interactions.",
     usedTechs: [
-      "React",
-      "HTML",
-      "SCSS",
-      "TypeScript"
+      "React Native",
+      "TypeScript",
+      "JavaScript",
+      "expo",
+      "Cloudflare",
+      "Python",
+      "CSS",
+      "Redux"
     ],
     tags: [
       "test",
