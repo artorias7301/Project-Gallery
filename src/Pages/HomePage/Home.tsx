@@ -3,6 +3,7 @@ import { Footer } from "../../Components/Footer/Footer";
 import { TopProjects } from "./TopProjects";
 import { ArrowUpRight } from "lucide-react";
 import styles from "./Home.module.scss"
+import HeroImage from '../../assets/images/Hero.jpeg'
 
 export function HomePage() {
   return (
@@ -23,8 +24,8 @@ export function HomePage() {
           </div>
           <div></div>
         </div>
-        <div className={styles.heroImage}>
-          <img src='../../assets/images/Hero.jpeg' />
+        <div className={styles.heroImageBox}>
+          <img src={HeroImage} className={styles.heroImage} />
         </div>
       </div>
 

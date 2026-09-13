@@ -1,11 +1,12 @@
-import { projects } from "../../assets/Data/EnData";
+import { projects } from "../../assets/Data/Data";
 import { ArrowRight } from "lucide-react";
 import styles from "./TopProjects.module.scss"
 
 export function TopProjects() {
   return (
     <>
-      {projects.map((project) => {
+      {projects.filter((project) => project.featured)
+      .map((project) => {
         return (
           <div key={project.id} className={styles.project}>
             <div className={styles.projectInfo}>

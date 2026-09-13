@@ -17,13 +17,29 @@
 }
 
 .section{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     padding: 2rem;
+    width: 100vw;
     margin: 3rem 0 3rem 0;
 }
 
-.hero {}
+.hero {
+    width: 20rem;
+}
+
+.heroImageBox {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .state {
     display: flex;

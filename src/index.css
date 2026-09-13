@@ -111,9 +111,9 @@ code {
 } */
 
 * {
-  /* margin: 0;
+  margin: 0;
   padding: 0;
-  box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 html::-webkit-scrollbar {
@@ -122,9 +122,8 @@ html::-webkit-scrollbar {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  position: relative;
   background-color: #000;
+  overflow-x: hidden;
 }
 
