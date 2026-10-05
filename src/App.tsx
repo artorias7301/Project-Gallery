@@ -1,16 +1,15 @@
 import { Routes, Route } from 'react-router';
 import { HomePage } from './Pages/HomePage/Home';
 import { Setting } from './Pages/Setting/Setting';
+import { ProjectGalleryPage } from './Pages/ProjectPage/projectgallery';
 import './App.css'
-
-// const id = crypto.randomUUID();
-// console.log(id);
 
 function App() {
   return (
     <>
       <Routes>
         <Route index element={<HomePage />} />
+        <Route path="projects" element={<ProjectGalleryPage />} />
         <Route path="setting" element={<Setting />} />
         {/* <Route path="*" element={<Page404 />} /> */}
       </Routes>
