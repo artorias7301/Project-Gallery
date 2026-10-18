@@ -1,23 +1,31 @@
 import { NavLink } from "react-router";
-import { Menu } from "lucide-react";
-import styles from "./Header.module.scss"
+import logo from "../../assets/images/logo.png";
+import themeToggle from "../../assets/images/them-toggle.png";
+import styles from "./Header.module.scss";
 
 export function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.wrapper}>
-        <h1 className={styles.name}>Artorias</h1>
-        <h2 className={styles.Bio}>Full-Stack Dev</h2>
+        <NavLink to="/" className={styles.logoBox} aria-label="Home">
+          <img src={logo} className={styles.logo} alt="Site logo" />
+        </NavLink>
+
+        <div className={styles.linkBox}>
+          <NavLink to="/" className={styles.link}>Home</NavLink>
+          <NavLink to="/projects" className={styles.link}>Projects</NavLink>
+          <NavLink to="/stack" className={styles.link}>Stack</NavLink>
+          <NavLink to="/contact" className={styles.link}>Contact</NavLink>
+        </div>
       </div>
 
-      <div className={styles.linkBox}>
-        <NavLink to={"/projects"} className={styles.link}>Projects</NavLink>
-        <NavLink to={"/stack"} className={styles.link}>Stack</NavLink>
-        <NavLink to={"/contact"} className={styles.link}>Contact</NavLink>
-      </div>
-
-      <div className={styles.menu}><Menu /></div>
-
+      <button
+        className={styles.themeButton}
+        type="button"
+        aria-label="Toggle theme"
+      >
+        <img src={themeToggle} className={styles.themToggle} alt="" />
+      </button>
     </div>
   );
-};
+}
