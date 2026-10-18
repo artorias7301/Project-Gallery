@@ -1,63 +1,118 @@
-import { ArrowUpRight, ExternalLink } from 'lucide-react';
-import { Header } from '../../Components/Header/Header';
-import { Footer } from '../../Components/Footer/Footer';
-import { projects } from '../../assets/Data/Data';
-import styles from './gallery.module.scss';
+import { useState } from "react";
+import { projects } from "../../assets/Data/Data";
+import { ProjectGalleryHeader } from "../../Components/Header/ProjectGalleryHeader";
+import styles from "./gallery.module.scss";
 
 export function ProjectGalleryPage() {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [darkMode, setDarkMode] = useState(true);
+
+  const filters = ["All", ...new Set(projects.flatMap((project) => project.category))];
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter);
+
+  // const siteClassName = darkMode ? styles.site : `${styles.site} ${styles.light}`;
+  const siteClassName = darkMode ? styles.site : `${styles.site} ${styles.site}`;
+
   return (
-    <>
-      <Header />
+    <main className={siteClassName}>
+      <div className={styles.portfolio}>
+        <ProjectGalleryHeader
+          darkMode={darkMode}
+          onToggleTheme={() => setDarkMode(!darkMode)}
+        />
 
-      <main className={styles.page}>
-        <section className={styles.heroSection}>
-          <p className={styles.kicker}>// project gallery</p>
-          <h1 className={styles.title}>Demo snapshots of the work.</h1>
-          <p className={styles.subtitle}>
-            A compact gallery of example projects, each with a visual preview,
-            a short summary, and the stack used to build it.
-          </p>
+        <section className={styles["projects-section"]} id="projects">
+          <div className={styles["section-top"]}>
+            <div className={styles["heading-block"]}>
+              <p className={styles.counter}>
+                <span>03</span> / 04
+              </p>
+
+              <h1>
+                My <span>Projects</span>
+              </h1>
+
+              <p className={styles.intro}>
+                A collection of web applications and side projects
+                <br />
+                I've built with modern technologies.
+              </p>
+            </div>
+
+            <div className={styles.filters} aria-label="Filter projects">
+              {filters.map((filter) => (
+                <button
+                  key={filter}
+                  className={
+                    activeFilter === filter
+                      ? `${styles.filter} ${styles.active}`
+                      : styles.filter
+                  }
+                  onClick={() => setActiveFilter(filter)}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles["project-grid"]}>
+            {filteredProjects.map((project, index) => (
+              <article
+                className={styles["project-card"]}
+                key={`${project.id}-${index}`}
+              >
+                <a
+                  className={styles["project-image"]}
+                  href={`#${project.id}`}
+                  aria-label={`View ${project.title}`}
+                >
+                  <img src={project.image} alt={`${project.title} preview`} />
+                  <span className={styles["image-overlay"]} />
+                </a>
+
+                <div className={styles["project-info"]}>
+                  <div className={styles["project-copy"]}>
+                    <h2>{project.title}</h2>
+                    <p className={styles["project-description"]}>
+                      {project.description}
+                    </p>
+                    <p>
+                      {project.usedTechs.map((tech, techIndex) => (
+                        <span key={`${project.id}-${tech}`}>
+                          {tech}
+                          {techIndex < project.usedTechs.length - 1 && (
+                            <i>/</i>
+                          )}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+
+                  <a
+                    className={styles["project-arrow"]}
+                    href={`#${project.id}`}
+                    aria-label={`Open ${project.title}`}
+                  >
+                    ↗
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
 
-        <section className={styles.galleryGrid}>
-          {projects.map((project) => (
-            <article key={project.id} className={styles.projectCard}>
-              <div className={styles.imageWrap}>
-                <img src={project.image} alt={project.title} className={styles.image} />
-              </div>
-
-              <div className={styles.cardBody}>
-                <div className={styles.cardHeader}>
-                  <span className={styles.badge}>Demo</span>
-                  {project.featured && <span className={styles.featured}>Featured</span>}
-                </div>
-
-                <h2 className={styles.projectTitle}>{project.title}</h2>
-                <p className={styles.description}>{project.description}</p>
-
-                <div className={styles.tags}> 
-                  {project.usedTechs.map((tech) => (
-                    <span key={`${project.id}-${tech}`} className={styles.tag}>
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div className={styles.actions}>
-                  <button type="button" className={styles.primaryButton}>
-                    Live Demo <ExternalLink size={15} />
-                  </button>
-                  <button type="button" className={styles.secondaryButton}>
-                    View Details <ArrowUpRight size={15} />
-                  </button>
-                </div>
-              </div>
-            </article>
-          ))}
-        </section>
-      </main>
-
-      <Footer />
-    </>
+        <footer className={styles.footer} id="contact">
+          <p>Selected work. Built with passion.</p>
+          <div className={styles["footer-line"]} />
+          <a href="mailto:hello@example.com">
+            Let's work together <span>→</span>
+          </a>
+        </footer>
+      </div>
+    </main>
   );
 }

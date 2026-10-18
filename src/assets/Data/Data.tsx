@@ -21,6 +21,7 @@ export const projects = [
       "first",
       "gallery"
     ],
+    category: "Web",
     featured: true
   },{
     id: "9424c1ac-7509-45be-a5bf-38cda4308a42",
@@ -42,6 +43,7 @@ export const projects = [
       "secound",
       "gallery"
     ],
+    category: "Mobile",
     featured: true
   },{
     id: "9424c1ac-7509-45be-a5bf-38cda4308a42",
@@ -63,6 +65,7 @@ export const projects = [
       "secound",
       "gallery"
     ],
+    category: "Other",
     featured: false
   },{
     id: "9424c1ac-7509-45be-a5bf-38cda4308a42",
@@ -84,6 +87,7 @@ export const projects = [
       "secound",
       "gallery"
     ],
+    category: "Other",
     featured: false
   },{
     id: "9424c1ac-7509-45be-a5bf-38cda4308a42",
@@ -105,6 +109,7 @@ export const projects = [
       "secound",
       "gallery"
     ],
+    category: "Other",
     featured: false
   }
 ]
