@@ -194,6 +194,10 @@ h1 span {
 
 .project-card {
   min-width: 0;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 0 6px #52f770;
+  border-radius: 10px;
+  padding: 0.25rem 0.25rem 0.5rem 0.25rem;
 }
 
 .project-image {
@@ -203,7 +207,7 @@ h1 span {
   aspect-ratio: 1.95 / 1;
   overflow: hidden;
   border: 1px solid #222724;
-  border-radius: 5px;
+  border-radius: 10px;
   background:
     radial-gradient(ellipse at 70% 80%, #113b1b 0%, transparent 48%),
     #090c0a;
