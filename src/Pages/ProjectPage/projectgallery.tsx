@@ -85,7 +85,7 @@ export function ProjectGalleryPage() {
                         <span key={`${project.id}-${tech}`}>
                           {tech}
                           {techIndex < project.usedTechs.length - 1 && (
-                            <i>/</i>
+                            <i> /</i>
                           )}
                         </span>
                       ))}
