@@ -1,6 +1,6 @@
 import logo from "../../assets/images/logo.png";
 import themeToggle from "../../assets/images/them-toggle.png";
-import styles from "../../Pages/ProjectPage/gallery.module.scss";
+import styles from "../../Pages/Projects/gallery.module.scss";
 
 type ProjectGalleryHeaderProps = {
   darkMode: boolean;

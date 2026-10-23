@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router';
-import { HomePage } from './Pages/HomePage/Home';
+import { HomePage } from './Pages/Home/Home';
 import { Setting } from './Pages/Setting/Setting';
-import { ProjectGalleryPage } from './Pages/ProjectPage/projectgallery';
+import { ProjectGalleryPage } from './Pages/Projects/projectgallery';
 import { ContactPage } from './Pages/Contact/Contact';
-import { StackPage } from './Pages/StackPage/Stack';
-import './App.css'
+import { AboutPage } from './Pages/about/about';
+import './App.css';
 
 function App() {
   return (
@@ -12,13 +12,13 @@ function App() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="projects" element={<ProjectGalleryPage />} />
-        <Route path="stack" element={<StackPage />} />
+        <Route path="about" element={<AboutPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="setting" element={<Setting />} />
         {/* <Route path="*" element={<Page404 />} /> */}
       </Routes>
     </>
   );
-};
+}
 
-export default App
+export default App;
