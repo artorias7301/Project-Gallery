@@ -86,6 +86,8 @@
 // }
 
 
+import { Link } from 'react-router';
+import { PortfolioHeader } from '../../Components/Header/PortfolioHeader';
 import styles from './Home.module.scss';
 
 const skills = ["React.js", "JavaScript", "Node.js", "UI / UX"];
@@ -94,22 +96,16 @@ export function HomePage() {
   return (
     <main className={styles.site}>
       <div className={styles.portfolio}>
-        <header className={styles.navbar}>
-          <a className={styles.logo} href="#home" aria-label="Home">
-            ΛM
-          </a>
-
-          <nav className={styles['nav-links']}>
-            <a className={styles.active} href="#home">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-          <button className={styles['theme-toggle']} aria-label="Dark theme">
-            ☾
-          </button>
-        </header>
+        <PortfolioHeader
+          activePage="home"
+          logoClassName={styles.logo}
+          classes={{
+            root: styles.navbar,
+            nav: styles['nav-links'],
+            active: styles.active,
+            theme: styles['theme-toggle'],
+          }}
+        />
 
         <section className={styles.hero} id="home">
           <div className={styles['hero-content']}>
@@ -135,13 +131,13 @@ export function HomePage() {
             </p>
 
             <div className={styles['hero-actions']}>
-              <a className={styles['button-primary']} href="/projects">
+              <Link className={styles['button-primary']} to="/projects">
                 Explore my work <span>↗</span>
-              </a>
+              </Link>
 
-              <a className={styles['button-secondary']} href="#contact">
+              <Link className={styles['button-secondary']} to="/contact">
                 Get in touch <span>→</span>
-              </a>
+              </Link>
             </div>
 
             <div className={styles['hero-meta']}>

@@ -85,6 +85,8 @@
 
 
 
+import { Link } from 'react-router';
+import { PortfolioHeader } from '../../Components/Header/PortfolioHeader';
 import styles from './about.module.scss';
 
 const skillGroups = [
@@ -159,20 +161,16 @@ export function AboutPage() {
   return (
     <main className={styles['about-site']}>
       <div className={styles['about-portfolio']}>
-        <header className={styles['about-navbar']}>
-          <a className={styles['about-logo']} href="/" aria-label="Home">
-            ΛM
-          </a>
-
-          <nav className={styles['about-nav-links']}>
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a className={styles.active} href="/about">About</a>
-            <a href="/contact">Contact</a>
-          </nav>
-
-          <span className={styles['about-theme-icon']}>☾</span>
-        </header>
+        <PortfolioHeader
+          activePage="about"
+          logoClassName={styles['about-logo']}
+          classes={{
+            root: styles['about-navbar'],
+            nav: styles['about-nav-links'],
+            active: styles.active,
+            theme: styles['about-theme-icon'],
+          }}
+        />
 
         {/* Intro */}
         <section className={styles['about-hero']}>
@@ -195,7 +193,7 @@ export function AboutPage() {
                 <span>reality.</span>
               </h1>
 
-              <p className="about-lead">
+              <p className={styles['about-lead']}>
                 Full Stack Developer focused on building
                 reliable, scalable, and thoughtfully designed
                 digital products — from the first interface
@@ -203,13 +201,13 @@ export function AboutPage() {
               </p>
 
               <div className={styles['about-hero-actions']}>
-                <a className={styles['about-primary-btn']} href="/projects">
+                <Link className={styles['about-primary-btn']} to="/projects">
                   Explore projects <span>↗</span>
-                </a>
+                </Link>
 
-                <a className={styles['about-secondary-btn']} href="/contact">
+                <Link className={styles['about-secondary-btn']} to="/contact">
                   Let's connect <span>→</span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -229,13 +227,13 @@ export function AboutPage() {
 
                 <div className={styles['about-code']}>
                   <p>
-                    <span className="code-muted">01</span>{" "}
-                    <span className="code-purple">const</span>{" "}
-                    <span className="code-blue">developer</span> = {"{"}
+                    <span className={styles['code-muted']}>01</span>{" "}
+                    <span className={styles['code-purple']}>const</span>{" "}
+                    <span className={styles['code-blue']}>developer</span> = {"{"}
                   </p>
                   <p>
-                    <span className="code-muted">02</span>{" "}
-                    &nbsp; role: <span className="code-green">"Full Stack"</span>,
+                    <span className={styles['code-muted']}>02</span>{" "}
+                    &nbsp; role: <span className={styles['code-green']}>"Full Stack"</span>,
                   </p>
                   <p>
                     <span className={styles['code-muted']}>03</span>{" "}
@@ -395,20 +393,19 @@ export function AboutPage() {
             </p>
           </div>
 
-          <a href="/contact" className={styles['about-primary-btn']}>
+          <Link to="/contact" className={styles['about-primary-btn']}>
             Start a conversation <span>↗</span>
-          </a>
+          </Link>
         </section>
 
         <footer className={styles['about-footer']}>
           <p>Thoughtful engineering. Built with intention.</p>
           <div />
-          <a href="/contact">
+          <Link to="/contact">
             Let's work together <span>→</span>
-          </a>
+          </Link>
         </footer>
       </div>
     </main>
   );
 }
-

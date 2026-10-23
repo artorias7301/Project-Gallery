@@ -14,7 +14,7 @@ export function Header() {
         <div className={styles.linkBox}>
           <NavLink to="/" className={styles.link}>Home</NavLink>
           <NavLink to="/projects" className={styles.link}>Projects</NavLink>
-          <NavLink to="/stack" className={styles.link}>Stack</NavLink>
+          <NavLink to="/about" className={styles.link}>About</NavLink>
           <NavLink to="/contact" className={styles.link}>Contact</NavLink>
         </div>
       </div>

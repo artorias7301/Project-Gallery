@@ -112,6 +112,7 @@
 
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
+import { PortfolioHeader } from '../../Components/Header/PortfolioHeader';
 import styles from './Contact.module.scss';
 
 export function ContactPage() {
@@ -152,18 +153,16 @@ export function ContactPage() {
   return (
     <main className={styles['contact-site']}>
       <div className={styles['contact-portfolio']}>
-        <header className={styles['contact-navbar']}>
-          <a className={styles['contact-logo']} href="/">ΛM</a>
-
-          <nav className={styles['contact-nav-links']}>
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/about">About</a>
-            <a className={styles.active} href="/contact">Contact</a>
-          </nav>
-
-          <span className={styles['contact-theme-icon']}>☾</span>
-        </header>
+        <PortfolioHeader
+          activePage="contact"
+          logoClassName={styles['contact-logo']}
+          classes={{
+            root: styles['contact-navbar'],
+            nav: styles['contact-nav-links'],
+            active: styles.active,
+            theme: styles['contact-theme-icon'],
+          }}
+        />
 
         <section className={styles['contact-heading']}>
           <p className={styles['contact-counter']}>
